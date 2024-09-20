@@ -9,7 +9,7 @@
       {{ task.title }}
     </label>
     <button @click="$emit('remove')">
-      <span class="mdi mdi-trash-can"></span>
+      <v-icon color="error" icon="mdi-trash-can-outline"></v-icon>
     </button>
   </li>
 </template>

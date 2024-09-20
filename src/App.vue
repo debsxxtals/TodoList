@@ -1,12 +1,12 @@
 <template>
-  <v-app id="inspire"> 
+  <v-app id="inspire">
     <v-navigation-drawer v-model="drawer" app expand-on-hover rail>
       <!--  -->
       <v-list>
         <v-list-item
-          prepend-avatar="https://randomuser.me/api/portraits/women/85.jpg"
-          subtitle="sandra_a88@gmailcom"
-          title="Sandra Adams"
+          :prepend-avatar="require('@/assets/phoyo.jpg')"
+          subtitle="riamietalaba@gmail.com"
+          title="Deborah Talaba"
         ></v-list-item>
       </v-list>
 
@@ -14,13 +14,13 @@
 
       <v-list density="compact" nav>
         <v-list-item
-          prepend-icon="mdi-folder"
-          title="My Files"
+          prepend-icon="mdi-format-list-checks"
+          title="Todo List"
           value="myfiles"
         ></v-list-item>
         <v-list-item
-          prepend-icon="mdi-account-multiple"
-          title="Shared with me"
+          prepend-icon="mdi-information-outline"
+          title="About"
           value="shared"
         ></v-list-item>
         <v-list-item
@@ -34,7 +34,7 @@
     <v-app-bar app>
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
-      <v-toolbar-title>Application</v-toolbar-title>
+      <v-toolbar-title>Bucket List</v-toolbar-title>
     </v-app-bar>
 
     <v-main>

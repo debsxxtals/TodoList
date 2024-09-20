@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <div class="task">
+  <v-container class="spacing-playground pa-5 cyan-lighten-4" fluid>
+    <v-card class="task pa-4 rounded-shaped">
       <!-- title -->
       <div class="title">
         <h1 class="text-uppercase">To Do List</h1>
@@ -14,7 +14,9 @@
           v-model="newTask"
           @keyup.enter="emitAddTask"
         />
-        <button @click="emitAddTask"><span class="mdi mdi-plus"></span></button>
+        <button @click="emitAddTask">
+          <v-icon icon="mdi-plus" size="large"></v-icon>
+        </button>
       </div>
 
       <!-- task lists -->
@@ -33,15 +35,18 @@
       <!-- buttons -->
       <div class="clearBtns">
         <button @click="emitClearCompleted">Clear completed</button>
-        <button @click="emitClearAll">Clear all</button>
+        <button @click="emitClearAll">
+          <v-icon icon="mdi-delete-empty-outline" size="large"></v-icon> Clear
+          all
+        </button>
       </div>
 
       <!-- pending task -->
       <div class="pendingTasks">
         <span>Pending Tasks: {{ incomplete }}</span>
       </div>
-    </div>
-  </div>
+    </v-card>
+  </v-container>
 </template>
 
 <script>
